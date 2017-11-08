@@ -3,7 +3,7 @@
    Author:      Joshua David
    Date:        October 26, 2017
    File name:   gomokuN.c
-   Compile:     cc -lpthreads gomokuN.c
+   Compile:     cc -lpthread gomokuN.c
    Run:         ./a.out
    Note:        Designed on a FreeBSD OS.
    Decription:
