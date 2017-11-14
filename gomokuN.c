@@ -116,7 +116,7 @@ int main() {
          turn = 1 - turn; // toggle the turn variable.
          }
    }
-   printf ("Player %d is the winner!", 1-turn+1);
+   printf ("Player %d is the winner! \n", 1-turn+1);
 }
 
 
