@@ -42,7 +42,6 @@ void *scanHorizontal (void *ptr);
 void assignDefaults(char **array,int r, int c, char d);
 
 typedef struct {
-    //Or whatever information that you need
     char **array;
     char **newMatrix;
     int size;
