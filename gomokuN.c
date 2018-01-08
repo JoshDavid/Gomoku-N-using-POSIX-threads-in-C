@@ -7,7 +7,6 @@
    Run:         ./a.out
    Note:        Designed on a FreeBSD OS.
    Decription:
-
    This program is a Gomoku-N game. Where N is the size of the board. It is
    assumed N > 2. The baord is dynamically allocated as a 2-D array.
    This is a turn based game for 2 players. Player 1 makes one move then
@@ -16,11 +15,9 @@
    Threads are used for each of the 3 board scans. Diagonal scans are
    implemented by creating a new board where each row is shifted,
    then the vertical scan can be applied to the newMatrix.
-
    The struct 'thread_args' is used for functions to grab arguments from. This
    is neccesary because we cannot pass multiple parameters to a function when
    we create a new pthread.
-
 */
 
 
@@ -116,6 +113,11 @@ int main() {
          }
    }
    printf ("Player %d is the winner! \n", 1-turn+1);
+   // free resources
+   for (i = 0; i < buffer.numOfRows; i++) {
+      free(buffer.array[i]);
+   }
+   free(buffer.array);
 }
 
 
