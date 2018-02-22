@@ -102,9 +102,9 @@ int main() {
          insertPiece(buffer.array,x ,y, turn);
          piecesPlaced++;
          print2DArray(buffer.array, buffer.numOfRows, buffer.numOfCols);
-         iret1 = pthread_create( &thread1, NULL, scanVertical ,(void*) &buffer);
-         iret2 = pthread_create(&thread2,NULL,scanHorizontal,(void*)&buffer);
-         iret3 = pthread_create( &thread3, NULL, scanDiagonal,(void*) &buffer);
+         iret1 = pthread_create(&thread1, NULL, scanVertical, (void*) &buffer);
+         iret2 = pthread_create(&thread2, NULL, scanHorizontal, (void*) &buffer);
+         iret3 = pthread_create(&thread3, NULL, scanDiagonal, (void*) &buffer);
 
          pthread_join(thread1, NULL);
          pthread_join(thread2, NULL);
