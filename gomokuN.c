@@ -85,7 +85,7 @@ int main() {
    // Game Loop
    while(!winnerT){
        printf("It is now Player %d's turn \n", turn + 1);
-       printf("Please enter the coordinate of your next move: \n");
+       printf("Please enter the coordinate of your next move (2 space delimited integers): \n");
        scanf("%d %d", &x, &y);
        // Check parameters
        if(piecesPlaced==size*4){
@@ -266,3 +266,4 @@ void insertPiece(char **array, int x, int y, int turn) {
     }
     array[x][y] = piece;
  }
+ 
